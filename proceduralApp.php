@@ -1,4 +1,5 @@
 <?php
+var_dump($_POST);
 error_reporting(E_ALL|E_STRICT);
 ini_set("display_errors", 1);
 
@@ -16,23 +17,15 @@ $db_selected = mysql_select_db($connect_attributes['dbname'],$link);
 if (!$db_selected){
     die('Can\'t use db : ' . mysql_error());
 }
-
-if(isset($_POST['limit'])){
-        $limit = $_POST["limit"];
-    }
-else $limit = 0;
-
 if(isset($_POST['sortoption'])){
-        $sortoption = $_POST["sortoption"];
-    }
+    $sortoption = $_POST["sortoption"];
+}
 else $sortoption = "sku";
 
 if(isset($_POST['sortorder'])){
     $sortorder = $_POST["sortorder"];
 }
 else $sortorder = "ASC";
-
-
 
 
 
@@ -45,7 +38,14 @@ ON catalog_product_website.product_id = catalog_product_entity.entity_id
 JOIN core_website
 ON catalog_product_website.website_id = core_website.website_id
 WHERE catalog_product_entity_varchar.attribute_id = 96
-ORDER BY  {$sortoption} {$sortorder}";
+ORDER BY {$sortoption}" . " {$sortorder}";
+
+if($_POST['limit'] > 0){
+    $limit = $_POST['limit'];
+    $sql .= " limit 0, {$limit}";
+} else{
+    $sql .= " limit 0, 30";
+}
 
 $result = mysql_query($sql);
 if(!$result){
