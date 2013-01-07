@@ -48,3 +48,5 @@ if(!$result){
 //var_dump($row);
 ?>
 </table>
+    </br>
+<a href="proceduralApp.php">Go back to previous page</a>
