@@ -2,7 +2,10 @@
 error_reporting(E_ALL|E_STRICT);
 ini_set('display_errprs',1);
 
-$sku = $_GET['sku'];
+if(!isset($_SESSION))
+{
+    session_start();
+}
 
 $xml = json_decode(json_encode(simpleXML_load_file('/var/www/magento/app/etc/local.xml','SimpleXMLElement', LIBXML_NOCDATA)),true);
 //var_dump($xml);
@@ -17,6 +20,7 @@ $db_selected = mysql_select_db($connect_attributes['dbname'],$link);
 if (!$db_selected){
     die('Can\'t use db : ' . mysql_error());
 }
+
 
 $sql = "SELECT catalog_product_entity.sku, catalog_product_entity_varchar.value, core_website.name
 FROM catalog_product_entity
@@ -44,6 +48,14 @@ if(!$result){
             "</td><td>" . $row['name'] .
             "</td></tr>";
     }
+
+    $url = $_SERVER['REQUEST_URI'];
+    $path_info = pathinfo($url);
+    $base_name = $path_info['basename'];
+
+    var_dump($_SESSION['view_url'] = $base_name);
+    $store_session = array();
+
 
 //var_dump($row);
 ?>
