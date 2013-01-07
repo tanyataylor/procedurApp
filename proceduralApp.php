@@ -40,7 +40,7 @@ ON catalog_product_website.website_id = core_website.website_id
 WHERE catalog_product_entity_varchar.attribute_id = 96
 ORDER BY {$sortoption}" . " {$sortorder}";
 
-if($_POST['limit'] > 0){
+if((isset($_POST['limit'])) AND $_POST['limit'] > 0){
     $limit = $_POST['limit'];
     $sql .= " limit 0, {$limit}";
 } else{
