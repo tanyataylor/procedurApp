@@ -1,13 +1,11 @@
+<pre/>
 <?php
-
+include('setters.php');
 //var_dump($_POST);
 error_reporting(E_ALL|E_STRICT);
 ini_set("display_errors", 1);
 
-if(!isset($_SESSION))
-{
-    session_start();
-}
+
 
 $xml = json_decode(json_encode(simpleXML_load_file('/var/www/magento/app/etc/local.xml','SimpleXMLElement', LIBXML_NOCDATA)),true);
 //var_dump($xml);
@@ -33,10 +31,6 @@ if(isset($_POST['sortorder'])){
 }
 else $sortorder = "ASC";
 
-$url = $_SERVER['REQUEST_URI'];
-$path_info = pathinfo($url);
-$base_name = $path_info['basename'];
-var_dump($_SESSION['view_url'] = $base_name);
 
 $sql = "SELECT catalog_product_entity.sku, catalog_product_entity_varchar.value, core_website.name
 FROM catalog_product_entity
@@ -60,8 +54,7 @@ $result = mysql_query($sql);
 if(!$result){
     die("Invalid query: " . mysql_error());
 }
-//var_dump($result);
-//if(!isset($_POST['submit'])){
+
 ?>
 
 <html>
@@ -91,6 +84,9 @@ if(!$result){
             "</td><td>" . $row['name'] .
             "</td></tr>";
         }
+
+
+
 
 //var_dump($row);
 ?>

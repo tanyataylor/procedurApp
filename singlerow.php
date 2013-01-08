@@ -1,11 +1,10 @@
+<pre/>
 <?php
+include('setters.php');
 error_reporting(E_ALL|E_STRICT);
 ini_set('display_errprs',1);
 
-if(!isset($_SESSION))
-{
-    session_start();
-}
+
 
 $xml = json_decode(json_encode(simpleXML_load_file('/var/www/magento/app/etc/local.xml','SimpleXMLElement', LIBXML_NOCDATA)),true);
 //var_dump($xml);
@@ -49,12 +48,10 @@ if(!$result){
             "</td></tr>";
     }
 
-    $url = $_SERVER['REQUEST_URI'];
-    $path_info = pathinfo($url);
-    $base_name = $path_info['basename'];
 
-    var_dump($_SESSION['view_url'] = $base_name);
-    $store_session = array();
+
+
+
 
 
 //var_dump($row);
