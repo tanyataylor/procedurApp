@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6463bdc9-87c1-4436-957f-8c1cdb5abc43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setters.php" afterPath="$PROJECT_DIR$/setters.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="procedurApp.iws" />
     <ignored path=".idea/workspace.xml" />
