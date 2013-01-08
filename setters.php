@@ -1,4 +1,3 @@
-<pre/>
 <?php
 
 error_reporting(E_ALL|E_STRICT);
@@ -23,8 +22,8 @@ for ($i=5; $i>=1; $i--){
 }
 
 $_SESSION['view_url'.$i] = $base_name;
-echo ("This is URL - _SESSION: <br />");
-var_dump($arr);
+//echo ("This is URL - _SESSION: <br />");
+//var_dump($arr);               //----------------------SESSION
 //var_dump($_SESSION);
 
 $cookie_urls= $_COOKIE['last_urls'];
@@ -46,8 +45,8 @@ foreach($str1 as $single){
     }
     else { }
 }
-echo ("<br />This is URL - _COOKIES: <br />");
-var_dump($cookie_arr);
+//echo ("<br />This is URL - _COOKIES: <br />");
+//var_dump($cookie_arr);   //------------------------COOKIE
 //var_dump($_COOKIE);
 
 echo "Render SESSION and COOKIE: <br />";
@@ -57,7 +56,7 @@ if (empty($arr)){
         echo "Site {$key} cookie : {$value} <br/>";
     }
 }else {
-    echo "Printing SESSION: ";
+    echo "Printing SESSION: <br/>";
     foreach($arr as $key=>$value){
         echo "Site {$key} session : {$value} <br/>";
     }

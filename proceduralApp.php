@@ -4,8 +4,6 @@ include('setters.php');
 error_reporting(E_ALL|E_STRICT);
 ini_set("display_errors", 1);
 
-
-
 $xml = json_decode(json_encode(simpleXML_load_file('/var/www/magento/app/etc/local.xml','SimpleXMLElement', LIBXML_NOCDATA)),true);
 //var_dump($xml);
 
@@ -85,8 +83,10 @@ if(!$result){
         }
 
 
-
-
-//var_dump($row);
 ?>
 </table>
+
+    <?php
+
+
+?>

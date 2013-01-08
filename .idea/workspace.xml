@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6463bdc9-87c1-4436-957f-8c1cdb5abc43" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proceduralApp.php" afterPath="$PROJECT_DIR$/proceduralApp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setters.php" afterPath="$PROJECT_DIR$/setters.php" />
     </list>
     <ignored path="procedurApp.iws" />
@@ -24,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="proceduralApp.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="proceduralApp.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proceduralApp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="84" column="0" selection-start="2746" selection-end="2746" vertical-scroll-proportion="0.7927461">
               <folding />
             </state>
           </provider>
@@ -45,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setters.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="setters.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setters.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.9493243">
+            <state line="63" column="0" selection-start="1565" selection-end="1565" vertical-scroll-proportion="-23.416666">
               <folding />
             </state>
           </provider>
@@ -67,9 +68,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/proceduralApp.php" />
         <option value="$PROJECT_DIR$/singlerow.php" />
         <option value="$PROJECT_DIR$/setters.php" />
+        <option value="$PROJECT_DIR$/proceduralApp.php" />
       </list>
     </option>
   </component>
@@ -271,13 +272,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/proceduralApp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/singlerow.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
@@ -290,7 +284,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setters.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.9493243">
+        <state line="63" column="0" selection-start="1565" selection-end="1565" vertical-scroll-proportion="-23.416666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proceduralApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2746" selection-end="2746" vertical-scroll-proportion="0.7927461">
           <folding />
         </state>
       </provider>
