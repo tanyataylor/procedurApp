@@ -1,4 +1,3 @@
-<pre/>
 <?php
 include('setters.php');
 error_reporting(E_ALL|E_STRICT);

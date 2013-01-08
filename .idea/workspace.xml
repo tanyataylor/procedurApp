@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6463bdc9-87c1-4436-957f-8c1cdb5abc43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setters.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/tanya.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/tanya.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proceduralApp.php" afterPath="$PROJECT_DIR$/proceduralApp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setters.php" afterPath="$PROJECT_DIR$/setters.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singlerow.php" afterPath="$PROJECT_DIR$/singlerow.php" />
     </list>
     <ignored path="procedurApp.iws" />
@@ -29,7 +30,7 @@
       <file leaf-file-name="proceduralApp.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proceduralApp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.25">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -38,10 +39,10 @@
       <file leaf-file-name="singlerow.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/singlerow.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="36" selection-end="36" vertical-scroll-proportion="-1.25">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding>
-                <marker date="1357658292000" expanded="true" signature="1346:1433" placeholder="..." />
-                <marker date="1357658292000" expanded="true" signature="1346:1432" placeholder="..." />
+                <marker date="1357671499000" expanded="true" signature="1339:1426" placeholder="..." />
+                <marker date="1357671499000" expanded="true" signature="1339:1425" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -51,9 +52,7 @@
         <entry file="file://$PROJECT_DIR$/setters.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#13#168#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,11 +204,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25337332" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25337332" sideWeight="0.8514589" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14854111" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -277,17 +276,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/proceduralApp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.25">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/singlerow.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="36" selection-end="36" vertical-scroll-proportion="-1.25">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding>
-            <marker date="1357658292000" expanded="true" signature="1346:1433" placeholder="..." />
-            <marker date="1357658292000" expanded="true" signature="1346:1432" placeholder="..." />
+            <marker date="1357671499000" expanded="true" signature="1339:1426" placeholder="..." />
+            <marker date="1357671499000" expanded="true" signature="1339:1425" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -295,9 +294,7 @@
     <entry file="file://$PROJECT_DIR$/setters.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#13#168#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

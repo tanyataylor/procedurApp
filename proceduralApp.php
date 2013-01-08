@@ -1,4 +1,3 @@
-<pre/>
 <?php
 include('setters.php');
 //var_dump($_POST);

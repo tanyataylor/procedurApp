@@ -1,12 +1,5 @@
 <pre/>
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: tanya
- * Date: 1/8/13
- * Time: 10:16 AM
- * To change this template use File | Settings | File Templates.
- */
 
 error_reporting(E_ALL|E_STRICT);
 ini_set('display_errprs',1);
@@ -16,15 +9,41 @@ if(!isset($_SESSION))
     session_start();
 }
 
+$arr = array();
 $url = $_SERVER['REQUEST_URI'];
 $path_info = pathinfo($url);
 $base_name = $path_info['basename'];
 
+$expire=time()+60*60*24*30;
+
 for ($i=5; $i>=1; $i--){
     $_SESSION['view_url'.$i]= $_SESSION['view_url'.($i - 1)];
-    var_dump($_SESSION['view_url'.$i]);
-
+    $arr[]=$_SESSION['view_url'.$i];
+    setcookie("last_urls", serialize($arr) , $expire);
 }
 
 $_SESSION['view_url'.$i] = $base_name;
-var_dump($_SESSION['view_url'.$i]);
+echo ("This is URL - _SESSION: <br />");
+var_dump($arr);
+
+$cookie_urls= $_COOKIE['last_urls'];
+//var_dump($cookie_urls);
+
+$str = $cookie_urls;
+$str1 = explode( ';', $str);
+//var_dump($str1);
+$cookie_arr = array();
+foreach($str1 as $single){
+    //var_dump($single);
+    $findme = '"';
+    $position = strpos($single,$findme);
+    if ($position !== false){
+        //echo "The string {$findme} was found at position {$position}";
+        $get_str = substr($single,$position);
+        $cookie_arr[] = $get_str;
+
+    }
+    else { }
+}
+echo ("<br />This is URL - _COOKIES: <br />");
+var_dump($cookie_arr);
