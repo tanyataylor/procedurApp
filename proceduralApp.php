@@ -79,6 +79,7 @@ create_log_entry("Test function of create log");
 </head>
 <body>
 <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    List Logs: <a href='logs.php'>View Logs</a>
     Enter Limit:<input type="text" size="12" maxlength="3" name="limit"><br /><br />
     Sort Option: SKU<input type="radio" value="sku" name="sortoption">
     Value<input type="radio" value="value" name="sortoption"><br />
@@ -100,7 +101,6 @@ create_log_entry("Test function of create log");
             "</td><td>" . $row['name'] .
             "</td></tr>";
         }
-
 
 ?>
 </table>

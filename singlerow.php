@@ -48,11 +48,6 @@ if(!$result){
     }
 
 
-
-
-
-
-
 //var_dump($row);
 ?>
 </table>
