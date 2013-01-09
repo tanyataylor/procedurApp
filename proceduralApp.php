@@ -1,3 +1,4 @@
+<pre/>
 <?php
 include('setters.php');
 //var_dump($_POST);
@@ -12,8 +13,10 @@ $connect_attributes = array_slice($contents,0,4);
 $link = mysql_connect($connect_attributes['host'],$connect_attributes['username'],$connect_attributes['password']);
 //var_dump($link);
 if (!$link){
+    create_log_entry("Error connecting to database: " . mysql_error);
     die("Could not connect: " . mysql_error());
 }
+create_log_entry("Successfully connected to database");
 $db_selected = mysql_select_db($connect_attributes['dbname'],$link);
 if (!$db_selected){
     die('Can\'t use db : ' . mysql_error());
@@ -52,6 +55,22 @@ if(!$result){
     die("Invalid query: " . mysql_error());
 }
 
+function create_log_entry($str){
+$d = date("Y-m-d");
+$file_path = getcwd();
+$file_path .= "/logs/";
+$file_path .= $d;
+$file_path .= ".log";
+$file = fopen($file_path, 'a+') or die("cannot open the file");
+$stringData = date('H-i-s') . " : " . $_SERVER['REMOTE_ADDR'] . " : " . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . " : "
+    . 'Session_id: ' . session_id() . "\n\t" . $str . "\n";
+fwrite($file, "$stringData");
+fclose($file);
+
+}
+create_log_entry("Test function of create log");
+
+
 ?>
 
 <html>
@@ -87,6 +106,8 @@ if(!$result){
 </table>
 
     <?php
+
+
 
 
 ?>
