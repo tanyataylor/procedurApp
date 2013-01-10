@@ -1,10 +1,15 @@
+<pre/>
+<br/>
+<br/>
+<a href="proceduralApp.php">Go back to previous page</a>
 <?php
+
 error_reporting(E_ALL|E_STRICT);
 ini_set('display_errors',1);
 
 
 function displayMonths(){ ?>
-<form name="display_logs" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<form name="display_logs" method="get" action="<?php echo $_SERVER['PHP_SELF'];?>">
     Select Month:<br />
     <select name="month">
         <option value="null">--</option>
@@ -27,31 +32,41 @@ function displayMonths(){ ?>
 }
 displayMonths();
 
-
 function listLogFiles($month = 'null'){
 
     $str = "logs/*";
-    if ($_POST['month'] != 'null'){
+    if ($_GET['month'] != 'null'){
         $str .= "-{$month}-*.log";
 
     }
     else {
         $str .= ".log";
-
-    }
-    foreach(glob($str) as $file){
-        echo "{$file}<br/>";
     }
 
+    foreach((array) glob($str) as $file){
+
+        echo "<a href='logs.php?filename=".substr($file,5)."&month=".$month."'>$file</a><br/>";
+        if ((isset($_GET['filename'])) && $_GET['filename']== substr($file,5))
+        {
+                       echo displayFileContents($_GET['filename']);
+       }
+    }
 }
 
-
-
+function displayFileContents($fileName){
+//$path = getcwd();    //add /logs/
+//echo $path;
+$path = '/var/www/procedurApp/logs/';
+$fileToRead = $path.$fileName;
+$fh = fopen($fileToRead,'r');
+$data = fread($fh, filesize($fileToRead));
+fclose($fh);
+return $data;
+}
+//displayFileContents("2013-01-10.log");
 
 echo "<h4>Log File List</h4>";
 
-listLogFiles($_POST['month']);
+if(isset($_GET['month'])){
+listLogFiles($_GET['month']);}
 ?>
-<br/>
-<br/>
-<a href="proceduralApp.php">Go back to previous page</a>
