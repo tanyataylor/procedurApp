@@ -7,19 +7,19 @@ function displayMonths(){ ?>
 <form name="display_logs" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
     Select Month:<br />
     <select name="month">
-        <option value="You did not select month">--</option>
-        <option value="January">January</option>
-        <option value="February">February</option>
-        <option value="March">March</option>
-        <option value="April">April</option>
-        <option value="May">May</option>
-        <option value="June">June</option>
-        <option value="July">July</option>
-        <option value="August">August</option>
-        <option value="September">September</option>
-        <option value="October">October</option>
-        <option value="November">November</option>
-        <option value="December">December</option>
+        <option value="null">--</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
         </select><br />
     <input type="submit" value="View Log" size="12" name="submit"><br />
     </form>
@@ -28,29 +28,29 @@ function displayMonths(){ ?>
 displayMonths();
 
 
+function listLogFiles($month = 'null'){
 
-if(isset($_POST['month'])){
-    echo "Selected month is " . $month = $_POST['month'];
-}
-else $month = "January by default";
+    $str = "logs/*";
+    if ($_POST['month'] != 'null'){
+        $str .= "-{$month}-*.log";
 
-function listLogFiles(){
-    $files = glob("logs/*.log");
-    if (count($files) > 0){
-        foreach($files as $file){
-            echo ($file);
-            ?>
-        <br/>
-        <?php
-            }
-        }
-    else {
-        echo "No files matching '*.log' ";
-        }
     }
+    else {
+        $str .= ".log";
+
+    }
+    foreach(glob($str) as $file){
+        echo "{$file}<br/>";
+    }
+
+}
+
+
+
+
 echo "<h4>Log File List</h4>";
 
-listLogFiles();
+listLogFiles($_POST['month']);
 ?>
 <br/>
 <br/>
